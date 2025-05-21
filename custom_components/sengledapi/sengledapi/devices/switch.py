@@ -23,7 +23,7 @@ class Switch:
         self._device_mac = device_mac
         self._friendly_name = friendly_name
         self._state = state
-        self._avaliable = True
+        self._available = True
         self._just_changed_state = False
         self._device_model = device_model
         self._accesstoken = accesstoken
@@ -84,6 +84,6 @@ class Switch:
                     self._state = (
                         True if int(items["attributes"]["onoff"]) == 1 else False
                     )
-                    self._avaliable = (
+                    self._available = (
                         False if int(items["attributes"]["isOnline"]) == 0 else True
                     )

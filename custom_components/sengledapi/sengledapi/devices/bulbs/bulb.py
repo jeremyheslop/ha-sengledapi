@@ -288,7 +288,7 @@ class Bulb:
                     if items.uuid == self._device_mac:
                         self._friendly_name = items.name
                         self._state = items.switch
-                        self._avaliable = items.isOnline
+                        self._available = items.isOnline
                         self._device_rssi = items.device_rssi
                         # Supported Features
                         if self._support_brightness:
@@ -326,7 +326,7 @@ class Bulb:
                             if items.uuid == self._device_mac:
                                 self._friendly_name = items.name
                                 self._state = items.switch
-                                self._avaliable = items.isOnline
+                                self._available = items.isOnline
                                 self._device_rssi = round(
                                     self.translate(
                                         int(items.device_rssi), 0, 5, -100, -30
