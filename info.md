@@ -19,7 +19,7 @@ You can find [Supported Products](https://github.com/jfarmer08/ha-sengledapi/wik
 * This is an unofficial implementation of the api and therefore may be disabled or broken at anytime by Sengled
 * I only have Element Classic A19 Kit (Light bulbs + Hub) https://us.sengled.com/products/element-classic-kit and the Wifi LED Multicolor A19 Bulb https://us.sengled.com/products/sengled-smart-wi-fi-led-multicolor-a19-bulb to test.
 
-* An update from Sengled may break this integration without my knowledge. **Please use the betas as they become avaliable**
+* An update from Sengled may break this integration without my knowledge. **Please use the betas as they become available**
 
 ** Wifi bulbs are supported by adding ```wifi: true``` to your configuration. All functions should be supported.
 
