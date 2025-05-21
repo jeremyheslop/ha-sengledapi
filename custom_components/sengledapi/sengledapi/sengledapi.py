@@ -227,13 +227,13 @@ class SengledApi:
 
     async def async_list_switch(self):
         _LOGGER.info("Sengled Api listing switches.")
-        switch = []
+        switches = []
         for device in await self.async_get_devices():
             _LOGGER.debug(device)
             if "lampInfos" in device:
-                for switch in device["lampInfos"]:
-                    if switch["attributes"]["productCode"] == "E1E-G7F":
-                        switch.append(
+                for lamp in device["lampInfos"]:
+                    if lamp["attributes"]["productCode"] == "E1E-G7F":
+                        switches.append(
                             Switch(
                                 self,
                                 device["deviceUuid"],
@@ -244,7 +244,7 @@ class SengledApi:
                                 SESSION.countryCode,
                             )
                         )
-        return switch
+        return switches
 
     async def async_do_request(self, url, payload, jsessionId):
         try:
